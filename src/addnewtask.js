@@ -10,7 +10,7 @@ const addNewTask = (arrTasks) => {
     addTaskToArray(arrTasks, newTaskDescription);
     saveTasks(arrTasks);
     showTaskList(arrTasks);
-  }
+ }
 };
 
 export default addNewTask;

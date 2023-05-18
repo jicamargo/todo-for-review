@@ -9,7 +9,7 @@ const deleteTask = (event, arrTasks, task) => {
     saveTasks(arrTasks);
     const listItem = event.target.closest('.list-item');
     listItem.remove();
-  }
+   }
 };
 
 export default deleteTask;
