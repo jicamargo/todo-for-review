@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #514f4f;
+}
+
+body {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 420px;
+  margin: 2rem auto;
+}
+
+.title div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.icon-refresh {
+  cursor: pointer;
+  width: 1.3rem;
+}
+
+.ul-list {
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.new-item {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-label {
+  flex-grow: 1;
+  padding-left: 1rem;
+}
+
+.clearCompleted {
+  padding: 1rem 0;
+  text-align: center;
+  color: #636262;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+}
+
+.icon-task {
+  cursor: pointer;
+  width: 1rem;
+  height: auto;
+}
+
+.icon-return {
+  cursor: pointer;
+  width: 1rem;
+  height: auto;
+}
+
+/* styles for phase 2 of the project  */
+
+::placeholder {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+}
+
+#new-task {
+  border-style: none;
+  width: 350px;
+  font-style: italic;
+}
+
+#new-task:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-edit {
+  margin-left: 1rem;
+  border-style: none;
+  width: 350px;
+  font-style: italic;
+  font-size: 1rem;
+  color: #918f8f;
+}
+
+.task-edit:focus {
+  outline: none;
+  background-color: lightgoldenrodyellow;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}
+
+.task-check:checked {
+  color: #ccc;
+}
+
+.editing-task {
+  background-color: lightgoldenrodyellow;
+}
+
+.list-item.dragging {
+  background-color: #bdc7ee;
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.list-item.dragging-over {
+  background-color: #859cf5;
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.icon-more {
+  cursor: grab;
+}
+
+.icon-trash {
+  margin: 0 0.5rem;
+}
