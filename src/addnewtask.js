@@ -1,17 +1,13 @@
-import Task from './task.js';
-import showTaskList from './showtasklist.js';
+import readNewTaskValue from './readnewtaskvalue.js';
+import addTaskToArray from './addtasktoarray.js';
 import saveTasks from './savetasks.js';
+import showTaskList from './showtasklist.js';
 
 const addNewTask = (arrTasks) => {
-  const newTaskInput = document.getElementById('new-task');
-  const newTaskDescription = newTaskInput.value.trim();
+  const newTaskDescription = readNewTaskValue();
 
   if (newTaskDescription !== '') {
-    const newTask = new Task(newTaskDescription);
-    const lastTaskIndex = arrTasks.length - 1;
-    newTask.index = lastTaskIndex >= 0 ? arrTasks[lastTaskIndex].index + 1 : 0;
-    arrTasks.push(newTask);
-    newTaskInput.value = '';
+    addTaskToArray(arrTasks, newTaskDescription);
     saveTasks(arrTasks);
     showTaskList(arrTasks);
   }

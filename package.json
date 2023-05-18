@@ -1,25 +1,27 @@
 {
-  "name": "webpack-demo",
+  "name": "todo-for-review",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "start": "webpack serve --open",
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jicamargo/webpack-demo.git"
+    "url": "git+https://github.com/jicamargo/todo-for-review.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jicamargo/webpack-demo/issues"
+    "url": "https://github.com/jicamargo/todo-for-review/issues"
   },
-  "homepage": "https://github.com/jicamargo/webpack-demo#readme",
+  "homepage": "https://github.com/jicamargo/todo-for-review#readme",
   "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.21.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
@@ -27,6 +29,7 @@
     "eslint-plugin-import": "^2.27.5",
     "hint": "^7.1.8",
     "html-webpack-plugin": "^5.5.1",
+    "jest": "^29.5.0",
     "style-loader": "^3.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
