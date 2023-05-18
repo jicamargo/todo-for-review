@@ -42,7 +42,7 @@ function showTaskList(arrTasks, parentElemId = 'list') {
     taskEditDescription.value = task.description;
     listItem.appendChild(taskEditDescription);
 
-    taskDescription.addEventListener('click', (event) => editTask(event, arrTasks, task));
+    taskDescription.addEventListener('click', (event) => editTask(event));
     taskEditDescription.addEventListener('blur', (event) => updateTask(event, arrTasks, task));
 
     const taskDelButton = document.createElement('div');

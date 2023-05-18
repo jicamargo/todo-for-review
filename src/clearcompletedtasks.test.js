@@ -1,7 +1,7 @@
-import clearCompletedTasks from './clearcompletedtasks';
-import saveTasks from './savetasks';
-import showTaskList from './showtasklist';
-import blinkEffect from './blinkeffect';
+import clearCompletedTasks from './clearcompletedtasks.js';
+import saveTasks from './savetasks.js';
+import showTaskList from './showtasklist.js';
+import blinkEffect from './blinkeffect.js';
 
 jest.mock('./savetasks', () => ({
   __esModule: true,

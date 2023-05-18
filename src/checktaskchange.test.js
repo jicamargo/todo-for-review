@@ -1,6 +1,6 @@
-import checkTask from './checktaskchange';
-import saveTasks from './savetasks';
-import blinkEffect from './blinkeffect';
+import checkTask from './checktaskchange.js';
+import saveTasks from './savetasks.js';
+import blinkEffect from './blinkeffect.js';
 
 jest.mock('./savetasks', () => ({
   __esModule: true,

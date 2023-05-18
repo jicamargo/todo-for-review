@@ -1,4 +1,4 @@
-const editTask = (event, arrTasks, task) => {
+const editTask = (event) => {
   const taskDescription = event.target;
   const taskEditDescription = taskDescription.nextElementSibling;
   const listItem = taskDescription.closest('.list-item');

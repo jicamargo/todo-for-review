@@ -3,7 +3,7 @@ import saveTasks from './savetasks.js';
 const updateTask = (event, arrTasks, task) => {
   const taskEditDescription = event.target;
   const taskDescription = taskEditDescription.previousElementSibling;
-   const listItem = taskEditDescription.closest('.list-item');
+  const listItem = taskEditDescription.closest('.list-item');
 
   task.description = taskEditDescription.value;
   taskDescription.textContent = taskEditDescription.value;
@@ -13,6 +13,5 @@ const updateTask = (event, arrTasks, task) => {
   taskDescription.classList.remove('hidden');
   saveTasks(arrTasks);
 };
-
 
 export default updateTask;

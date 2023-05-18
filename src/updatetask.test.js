@@ -1,5 +1,5 @@
-import updateTask from './updatetask';
-import saveTasks from './savetasks';
+import updateTask from './updatetask.js';
+import saveTasks from './savetasks.js';
 
 jest.mock('./savetasks', () => ({
   __esModule: true,
@@ -31,8 +31,8 @@ describe('updateTask', () => {
       value: '',
       previousElementSibling: null,
       classList: {
-        add: jest.fn(),     // jest.fn() is a mock function, to simulate the classList.add() method
-        remove: jest.fn(),  // jest.fn() is a mock function, to simulate the classList.remove() method
+        add: jest.fn(), // jest.fn() is a mock function, to simulate the classList.add() method
+        remove: jest.fn(), // jest.fn() is a mock function, to simulate the classList.remove()
       },
     };
     taskDescriptionMock = {
@@ -48,7 +48,7 @@ describe('updateTask', () => {
 
     // mockImplementation() is a mock function, to simulate the classList.remove() method
     listItemMock.classList = {
-      remove: jest.fn().mockImplementation((className) => { 
+      remove: jest.fn().mockImplementation((className) => {
         if (className === 'editing-task') {
           listItemMock.classList.contains = () => false;
         }
@@ -61,14 +61,15 @@ describe('updateTask', () => {
       createElement: jest.fn((typeOfElement) => {
         if (typeOfElement === 'input') {
           return taskEditDescriptionMock;
-        } else if (typeOfElement === 'span') {
+        } if (typeOfElement === 'span') {
           return taskDescriptionMock;
         }
+        return null;
       }),
     };
 
     // mock localStorage
-    global.localStorage = { 
+    global.localStorage = {
       setItem: jest.fn(),
     };
   });
