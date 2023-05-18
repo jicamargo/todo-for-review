@@ -38,5 +38,5 @@ describe('add', () => {
   test('add new task to array tasks', () => {
     expect(addTaskToArray(arrTasks, 'task for testing')).toEqual(arrTasks2);
     expect(addTaskToArray(arrTasks, 'task for testing')).toHaveLength(4);
-  }); // end of test 
-}); // end of describe 
+  }); // end of test
+}); // end of describe
