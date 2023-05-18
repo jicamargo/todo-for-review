@@ -4,6 +4,7 @@
 import deleteTaskFromArray from './deletetaskfromarray.js';
 
 const arrTasks = [
+// ARRANGE
   {
     index: 0,
     description: 'Task 1',
@@ -34,9 +35,12 @@ const arrTasks2 = [
   },
 ];
 
+// ACT
+
 describe('delete', () => {
   test('delete task to array tasks', () => {
+    // ASSERT
     expect(deleteTaskFromArray(arrTasks, arrTasks[2])).toEqual(arrTasks2);
-    expect(deleteTaskFromArray(arrTasks, arrTasks[0])).toHaveLength(1);
+    expect(deleteTaskFromArray(arrTasks, arrTasks[0])).toHaveLength(1); // ASSERT
   }); // end test
 }); // end describe

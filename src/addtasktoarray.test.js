@@ -4,6 +4,9 @@
 import addTaskToArray from './addtasktoarray.js';
 
 const arrTasks = [
+
+  // ARRANGE
+
   {
     index: 0,
     description: 'Task 1',
@@ -34,9 +37,12 @@ const arrTasks2 = [
   },
 ];
 
+// ACT
 describe('add', () => {
+  // ASSERT
+
   test('add new task to array tasks', () => {
-    expect(addTaskToArray(arrTasks, 'task for testing')).toEqual(arrTasks2);
-    expect(addTaskToArray(arrTasks, 'task for testing')).toHaveLength(4);
+    expect(addTaskToArray(arrTasks, 'task for testing')).toEqual(arrTasks2); // ASSERT
+    expect(addTaskToArray(arrTasks, 'task for testing')).toHaveLength(4); // ASSERT
   }); // end of test
 }); // end of describe
