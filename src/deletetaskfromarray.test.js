@@ -42,5 +42,5 @@ describe('delete', () => {
     // ASSERT
     expect(deleteTaskFromArray(arrTasks, arrTasks[2])).toEqual(arrTasks2);
     expect(deleteTaskFromArray(arrTasks, arrTasks[0])).toHaveLength(1); // ASSERT
-  }); // end test
-}); // end describe
+  }); // end of test
+}); // end of describe
