@@ -8,6 +8,7 @@ jest.mock('./savetasks', () => ({
 
 describe('updateTask', () => {
   // Arrange: create all Mocks to simulate the DOM elements, its classes and the localStorage
+
   let eventMock;
   let arrTasksMock;
   let taskMock;
@@ -47,6 +48,7 @@ describe('updateTask', () => {
     taskEditDescriptionMock.value = 'Updated task description';
 
     // mockImplementation() is a mock function, to simulate the classList.remove() method
+
     listItemMock.classList = {
       remove: jest.fn().mockImplementation((className) => {
         if (className === 'editing-task') {

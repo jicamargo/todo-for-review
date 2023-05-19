@@ -40,7 +40,7 @@ describe('clearCompletedTasks', () => {
     blinkEffect.mockClear();
   });
 
-  test('clears completed tasks, updates UI, and saves tasks', () => {
+  test('Clear completed tasks, Update UI, and save tasks', () => {
     // Arrange
     eventMock.target = {};
 
@@ -56,7 +56,7 @@ describe('clearCompletedTasks', () => {
     expect(blinkEffect).toHaveBeenCalledWith(eventMock.target);
   });
 
-  test('does nothing when there are no completed tasks', () => {
+  test('Do nothing when there are no completed tasks', () => {
     // Arrange
     arrTasksMock = [
       { completed: false },
