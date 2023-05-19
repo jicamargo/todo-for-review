@@ -2,6 +2,7 @@ import iconMore from './images/icon-more-vert.svg';
 import iconTrash from './images/icon-trash.svg';
 import deleteTask from './deletetask.js';
 import editTask from './edittask.js';
+import updateTask from './updatetask.js';
 import checkTaskChange from './checktaskchange.js';
 import {
   dragDrop, dragOver, dragStart, dragEnd, dragLeave,
@@ -41,7 +42,8 @@ function showTaskList(arrTasks, parentElemId = 'list') {
     taskEditDescription.value = task.description;
     listItem.appendChild(taskEditDescription);
 
-    taskDescription.addEventListener('click', (event) => editTask(event, arrTasks, task));
+    taskDescription.addEventListener('click', (event) => editTask(event));
+    taskEditDescription.addEventListener('blur', (event) => updateTask(event, arrTasks, task));
 
     const taskDelButton = document.createElement('div');
     taskDelButton.classList = 'task-delete-btn ';
